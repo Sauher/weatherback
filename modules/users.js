@@ -26,5 +26,15 @@ router.post('/login', (req,res) =>{
 })
 
 
+router.get('/:id', (req,res)=>{
+    let id = Number(req.params.id)
+    let idx = users.findIndex(user => Number(user.id) === id)
+    if(idx >-1){
+        return res.send(users[idx])
+    }
+    return res.status(400).send({msg: "Nincs ilyen azonosítójú felhasználó!"})
+})
+
+
 
 module.exports = router
