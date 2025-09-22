@@ -1,0 +1,10 @@
+### Register User
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "Karcsi",
+    "email": "Tesztkarcsi@teszt.com",
+    "password": "ASDasd123"
+}
