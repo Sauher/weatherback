@@ -35,6 +35,36 @@ router.get('/:id', (req,res)=>{
     return res.status(400).send({msg: "Nincs ilyen azonosítójú felhasználó!"})
 })
 
+router.patch('/:id', (req,res) =>{
+    let data = req.body
 
+    let idx = users.findIndex(user => Number(user.id) === data.id)
+    if(idx >-1){
+        if(data.email && data.email != users[idx].email){
+            let exists = users.some(user => user.email === data.email && Number(user.id) !== id)
+            if(exists){
+                return res.status(400).send({msg: "bademail"})
+            }
+            users[idx].email = data.email
+            
+        }
+        if(data.name) users[idx].name = data.name
+        saveUsers()
+        res.send({msg: "Sikeres fríssítés!"})
+        
+    }
+    return res.status(400).send({msg: "Hiba a frissítés során"})
+})
+router.patch('/changepass/:id', (req,res) =>{
+    let data = req.body
+    let idx = users.findIndex(user => Number(user.id) === data.id)
+
+    if(idx >-1){
+        users[idx].password = data.password
+        saveUsers()
+        res.send({msg: "Sikeres fríssítés!"})
+    }
+    return res.status(400).send({msg: "Hiba a frissítés során"})
+})
 
 module.exports = router

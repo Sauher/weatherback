@@ -8,3 +8,25 @@ Content-Type: application/json
     "email": "Tesztkarcsi@teszt.com",
     "password": "ASDasd123"
 }
+
+### Get user by id
+GET http://localhost:3000/users/1
+Content-Type: application/json
+
+### Update user by id
+PATCH  http://localhost:3000/users/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "asd",
+    "email": "a@aa.com"
+}
+### Update user password by id
+PATCH  http://localhost:3000/users/changepass/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "password": "ASDasd123"
+}
