@@ -6,5 +6,5 @@ Content-Type: application/json
     "id": 0,
     "name": "cloudy",
     "minmax": [10,27],
-    "date": "2025.09.23"
+    "date": "2025-09-23"
 }

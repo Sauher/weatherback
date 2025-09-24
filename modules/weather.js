@@ -10,7 +10,7 @@ router.post('', (req,res) =>{
     res.send({msg:"Sikeres adatfelvitel!"})
 })
 
-router.patch('', (req,res)=>{
+router.patch('/:id', (req,res)=>{
     let id = Number(req.params.id)
     let data = req.body
     let idx = weather.findIndex(weather => Number(weather.id) === id)
@@ -19,6 +19,22 @@ router.patch('', (req,res)=>{
         if(data.date) weather[idx].date = data.date
         if(data.minmax) weather[idx].minmax = data.minmax
         if(data.name) weather[idx].name = data.name
+        saveWeatherdata()
+        res.send({msg:"Sikeres adatfrissítés!"})
     }
+    res.status(400).send({msg:"Nincs ilyen azonosítójú lépésadat"})
+
+    
+})
+router.delete('/:id', (req,res)=>{
+    let id = Number(req.params.id)
+    let idx = weather.findIndex(weather => Number(weather.id) === id)
+    weather.splice(idx,1)
+    saveWeatherdata()
+    res.send({msg:"Sikeres törlés!"})
+})
+
+router.get('', (req,res) =>{
+    res.send(weather)
 })
 module.exports = router
