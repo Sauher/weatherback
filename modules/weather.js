@@ -22,16 +22,19 @@ router.patch('/:id', (req,res)=>{
         saveWeatherdata()
         res.send({msg:"Sikeres adatfrissítés!"})
     }
-    res.status(400).send({msg:"Nincs ilyen azonosítójú lépésadat"})
+    res.status(400).send({msg:"Nincs ilyen azonosítójú időjárásadat"})
 
     
 })
 router.delete('/:id', (req,res)=>{
     let id = Number(req.params.id)
     let idx = weather.findIndex(weather => Number(weather.id) === id)
+    if(idx >-1){
     weather.splice(idx,1)
     saveWeatherdata()
     res.send({msg:"Sikeres törlés!"})
+    }
+    res.status(400).send({msg:"Nincs ilyen azonosítójú időjárásadat"})
 })
 
 router.get('', (req,res) =>{

@@ -1,1 +1,1 @@
-[{"id":1,"name":"rainy","minmax":["15","20"],"date":"2025-09-29"},{"id":2,"name":"foggy","minmax":["10","21"],"date":"2025-09-30"},{"id":3,"name":"foggy","minmax":["8","18"],"date":"2025-10-01"}]
+[{"id":2,"name":"foggy","minmax":["10","21"],"date":"2025-09-30"},{"id":3,"name":"cloudy","minmax":[10,22],"date":"2025-10-01"},{"id":4,"name":"sunny","minmax":[10,23],"date":"2025-10-02"}]
