@@ -21,3 +21,6 @@ Content-Type: application/json
     "minmax": [10,22],
     "date": "2025-10-01"
 }
+### GET weatherdata
+GET http://localhost:3000/weather
+Content-Type: application/json
