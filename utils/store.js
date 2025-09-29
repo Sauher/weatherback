@@ -73,6 +73,7 @@ function saveUsers(){
     fs.writeFileSync(USER_FILE,JSON.stringify(users))
 }
 function saveWeatherdata(){
+    weather.sort((a,b) => new Date(a.date) - new Date(b.date))
     fs.writeFileSync(WEATHER_FILE,JSON.stringify(weather))
 }
 module.exports = {saveUsers,loadUsers,getNextId,isEmailExist,saveWeatherdata,loadWeatherdata,users,weather}
