@@ -1,1 +1,15 @@
-[{"id":2,"name":"foggy","minmax":["10","21"],"date":"2025-09-30"},{"id":3,"name":"cloudy","minmax":[10,22],"date":"2025-10-01"},{"id":4,"name":"sunny","minmax":[10,23],"date":"2025-10-02"}]
+[{"id":8,"name":"foggy","minmax":[9,21],"date":"2025-10-06"},
+{"id":9,"name":"storm","minmax":[12,25],"date":"2025-10-07"},
+{"id":10,"name":"rainy","minmax":[10,23],"date":"2025-10-08"},
+{"id":11,"name":"sunny","minmax":[11,24],"date":"2025-10-09"},
+{"id":12,"name":"cloudy","minmax":[9,22],"date":"2025-10-10"},
+{"id":13,"name":"snowy","minmax":[8,20],"date":"2025-10-11"},
+{"id":14,"name":"foggy","minmax":[10,21],"date":"2025-10-12"},
+{"id":15,"name":"rainy","minmax":[11,23],"date":"2025-10-13"},
+{"id":16,"name":"storm","minmax":[12,24],"date":"2025-10-14"},
+{"id":17,"name":"sunny","minmax":[10,23],"date":"2025-10-15"},
+{"id":18,"name":"cloudy","minmax":[9,22],"date":"2025-10-16"},
+{"id":19,"name":"snowy","minmax":[8,21],"date":"2025-10-17"},
+{"id":20,"name":"foggy","minmax":[9,20],"date":"2025-10-18"},
+{"id":21,"name":"rainy","minmax":[10,23],"date":"2025-10-19"},
+{"id":22,"name":"sunny","minmax":[11,24],"date":"2025-10-20"}]
